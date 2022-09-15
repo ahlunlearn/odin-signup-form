@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+}
+body{
     background-color: 	#404040;
 }
 .page{
@@ -53,4 +55,98 @@
 .left-page > .footer{
     text-align: end;
     padding-right: 10px;
+}
+
+.right-page{
+    background-color: #dfe0d5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.right-page .intro{
+    margin-left: 40px;
+}
+.form{
+    background-color: white;
+    padding-left: 40px;
+    box-shadow: 5px 0px 5px #404040;
+}
+fieldset{
+    position: relative;
+    border: none;
+    padding: 25px 0;
+}
+
+fieldset legend{
+    display: block;
+    padding-top: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 10px;
+}
+
+.form-row .form-row-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 5px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.form-row .form-row-item input{
+    border: 1px solid #E5E7EB;
+    padding: 7px;
+    border-radius: 5px;
+}
+.form-row .form-row-item input:focus{
+    outline: none;
+    border: 1px solid cadetblue;
+    box-shadow: 2px 2px 5px cadetblue;
+}
+.form-row .form-row-item input:invalid{
+    outline: 1px solid red;
+}
+form{
+    position: relative;
+}
+form .form-submit{
+    position:absolute;
+    bottom: -130px;
+}
+form button:hover{
+    opacity: 0.8;
+}
+form button{
+    cursor: pointer;
+    background-color: #596D48;
+    padding: 20px 40px;
+    color: white;
+    border-radius: 15px;
+    font-size: larger;
+}
+
+@media screen and (max-width:1200px) {
+    .page{
+        height: 120vh;
+    }
+    .right-page{
+        height: 120vh;
+    }
+    .form-row{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
 }
